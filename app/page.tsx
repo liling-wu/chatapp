@@ -2,9 +2,11 @@ import { Chat } from '@/components/Chat';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24 bg-gray-50">
-      <h1 className="text-3xl font-bold mb-8 text-gray-800">Chat Interface</h1>
-      <Chat />
+    <main className="h-screen flex-col items-center px-0 bg-gray-50">
+      <div className="w-full min-h-screen flex flex-col items-center">
+
+        <Chat />
+      </div>
     </main>
   );
 }

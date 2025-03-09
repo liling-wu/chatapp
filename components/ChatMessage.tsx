@@ -45,10 +45,13 @@ export function ChatMessage({ message }: ChatMessageProps) {
   return (
     <div
       className={cn(
-        'flex w-full',
-        isUser ? 'justify-end' : 'justify-start'
+        'flex w-full flex-col',
+        isUser ? 'items-end' : 'items-start'
       )}
     >
+      <span className="text-sm text-gray-500 mb-1 px-1">
+        {isUser ? 'You' : 'Bot'}
+      </span>
       <div
         className={cn(
           'flex max-w-[80%] rounded-lg px-4 py-2',

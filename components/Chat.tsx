@@ -59,7 +59,7 @@ export function Chat() {
             } else {
               clearInterval(typingInterval);
             }
-          }, 30);
+          }, Math.random() * 100 + 20);
 
           return () => clearInterval(typingInterval);
         }, 1000);
@@ -86,24 +86,47 @@ export function Chat() {
     }
   };
 
+  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    if (isInputEnabled) {
+      setDisplayedContent(e.target.value);
+    }
+  };
+
   return (
-    <div className="flex h-[600px] w-full max-w-3xl flex-col shadow-lg">
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
+    <div className="flex min-h-screen w-full max-w-3xl mx-8 flex-col overflow-hidden">
+      <header className="w-full">
+        <h1 className="text-3xl font-bold text-gray-800"></h1>
+      </header>
+      <div className={cn(
+        "flex-1 overflow-y-auto p-4 space-y-4 mt-8",
+        messages.length === 0 ? "flex items-center justify-center" : ""
+      )}>
         {messages.map((message) => (
           <ChatMessage key={message.id} message={message} />
         ))}
         <div ref={messagesEndRef} />
       </div>
-      <div className="border-t p-4">
-        <div className="flex gap-2">
-          <div className="flex-1 relative">
+      <div className={cn(
+        "p-4",
+        messages.length === 0 ? "absolute top-1/2 left-1/2 -translate-y-1/2 w-[calc(100%-2rem)]" : "sticky bottom-0"
+      )}>
+        <div className="flex gap-2 min-h-[108px] h-[108px] rounded-lg border border-gray-300">
+          <div className="flex-1 relative h-full">
             <textarea
               ref={textareaRef}
               value={displayedContent}
-              readOnly
+              onChange={handleInputChange}
+              onKeyDown={handleKeyPress}
               placeholder="Type your message..."
-              className="w-full resize-none rounded-lg border p-2 pr-10 bg-gray-50 min-h-[40px] max-h-[200px] overflow-y-auto"
-              style={{ height: 'auto' }}
+              className="w-full resize-none rounded-lg p-2 pr-10 cursor-text"
+              style={{ 
+                height: '108px',
+                outline: 'none',
+                border: 'none',
+                boxShadow: 'none',
+                maxHeight: '108px',
+                overflowY: 'auto'
+              }}
               rows={1}
             />
             <button
@@ -122,6 +145,7 @@ export function Chat() {
                 fill="none"
                 stroke="currentColor"
                 className="h-5 w-5"
+                style={{ transform: 'rotate(-45deg)' }}
               >
                 <path
                   strokeLinecap="round"
