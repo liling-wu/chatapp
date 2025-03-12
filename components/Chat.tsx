@@ -133,10 +133,10 @@ export function Chat() {
               onClick={handleSendMessage}
               disabled={!isInputEnabled || !displayedContent.trim()}
               className={cn(
-                "absolute right-2 top-1/2 -translate-y-1/2 p-1.5 rounded-md transition-colors",
+                "absolute right-2 top-1/2 -translate-y-1/2 p-1.5 rounded-full transition-colors",
                 isInputEnabled && displayedContent.trim()
-                  ? "text-blue-500 hover:bg-blue-50"
-                  : "text-gray-300"
+                  ? "text-blue-500 hover:bg-blue-50 hover:w-8 h-8 flex items-center justify-center"
+                  : "text-gray-300 w-8 h-8 flex items-center justify-center"
               )}
             >
               <svg
