@@ -8,13 +8,13 @@ export interface Message {
 export const predefinedMessages: Message[] = [
   {
     id: '1',
-    content: "Hi, Alex. We're having some issues with the SauceBot Nr.1001 on the pizza line. Unfortunately, I don't know much about it yet, since it's a new machine. That's why I need your help to better diagnose the problem. Can you tell me what the SauceBot is mainly used for?",
+    content: "Hi, Peter. We're having some issues with the Sauce Station Nr.1001 on the pizza line. Unfortunately, I don't know much about it yet, since it's a new machine. That's why I need your help to better diagnose the problem. Can you tell me what the Sauce Station is mainly used for?",
     role: 'assistant',
     timestamp: new Date(),
   },
   {
     id: '2',
-    content: "Sure thing. SauceBot Nr.1001 is our automated sauce dispenser on the Margherita line. It's set up to evenly spread tomato sauce over each pizza base as it moves down the line.",
+    content: "Sure thing. Sauce Station Nr.1001 is our automated sauce dispenser on the Margherita line. It's set up to evenly spread tomato sauce over each pizza base as it moves down the line.",
     role: 'user',
     timestamp: new Date(),
   },
@@ -26,25 +26,25 @@ export const predefinedMessages: Message[] = [
   },
   {
     id: '4',
-    content: "SauceBot uses a nozzle that releases a pre-measured amount of sauce over the dough, ensuring even coverage. The process is tightly controlled to maintain consistency and prevent spills.",
+    content: "Sauce Station uses a nozzle that releases a pre-measured amount of sauce over the dough, ensuring even coverage. The process is tightly controlled to maintain consistency and prevent spills.",
     role: 'user',
     timestamp: new Date(),
   },
   {
     id: '5',
-    content: "Got it. What are the environmental conditions in which the SauceBot operates?",
+    content: "Got it. What are the environmental conditions in which the Sauce Station operates?",
     role: 'assistant',
     timestamp: new Date(),
   },
   {
     id: '6',
-    content: "SauceBot operates in a 15°C room with controlled humidity to keep the sauce at an optimal thickness and to prevent drying out. The area is sanitized frequently, as required by food safety standards.",
+    content: "Sauce Station operates in a 15°C room with controlled humidity to keep the sauce at an optimal thickness and to prevent drying out. The area is sanitized frequently, as required by food safety standards.",
     role: 'user',
     timestamp: new Date(),
   },
   {
     id: '7',
-    content: "Good to know. Have there been any recent changes in SauceBot's environment or configuration?",
+    content: "Good to know. Have there been any recent changes in Sauce Station's environment or configuration?",
     role: 'assistant',
     timestamp: new Date(),
   },
@@ -56,7 +56,7 @@ export const predefinedMessages: Message[] = [
   },
   {
     id: '9',
-    content: "Alright, that's helpful. Could you explain the main product requirements for SauceBot's operation? Any specific standards?",
+    content: "Alright, that's helpful. Could you explain the main product requirements for Sauce Station's operation? Any specific standards?",
     role: 'assistant',
     timestamp: new Date(),
   },
@@ -74,7 +74,7 @@ export const predefinedMessages: Message[] = [
   },
   {
     id: '12',
-    content: "Sure. As each pizza base arrives, SauceBot detects its position and starts dispensing from the center, moving out in a spiral motion. The sensor adjusts for the dough's position to make sure the sauce is applied evenly, then shuts off once the portion is complete.",
+    content: "Sure. As each pizza base arrives, Sauce Station detects its position and starts dispensing from the center, moving out in a spiral motion. The sensor adjusts for the dough's position to make sure the sauce is applied evenly, then shuts off once the portion is complete.",
     role: 'user',
     timestamp: new Date(),
   },
@@ -116,7 +116,7 @@ export const predefinedMessages: Message[] = [
   },
   {
     id: '19',
-    content: "We're currently seeing some issues with SauceBot applying uneven sauce coverage. Some pizzas have too much sauce in one area and barely any in others. Based on your experience, what could be causing this?",
+    content: "We're currently seeing some issues with Sauce Station applying uneven sauce coverage. Some pizzas have too much sauce in one area and barely any in others. Based on your experience, what could be causing this?",
     role: 'assistant',
     timestamp: new Date(),
   },
