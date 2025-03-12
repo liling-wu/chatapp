@@ -93,12 +93,12 @@ export function Chat() {
   };
 
   return (
-    <div className="flex min-h-screen w-full max-w-3xl mx-8 flex-col overflow-hidden">
+    <div className="flex min-h-screen w-full max-w-3xl mx-8 flex-col overflow-hidden relative">
       <header className="w-full">
         <h1 className="text-3xl font-bold text-gray-800"></h1>
       </header>
       <div className={cn(
-        "flex-1 overflow-y-auto p-4 space-y-4 mt-8",
+        "flex-1 overflow-y-auto p-4 space-y-4 mt-8 pb-[350px]",
         messages.length === 0 ? "flex items-center justify-center" : ""
       )}>
         {messages.map((message) => (
@@ -107,10 +107,10 @@ export function Chat() {
         <div ref={messagesEndRef} />
       </div>
       <div className={cn(
-        "p-4",
-        messages.length === 0 ? "absolute top-1/2 left-1/2 -translate-y-1/2 w-[calc(100%-2rem)]" : "sticky bottom-0"
+        "fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-3xl px-8 pb-8 bg-white",
+        messages.length === 0 ? "top-1/2 -translate-y-1/2" : ""
       )}>
-        <div className="flex gap-2 min-h-[108px] h-[108px] rounded-lg border border-gray-300">
+        <div className="flex gap-2 min-h-[108px] h-[108px] rounded-lg border border-gray-300 bg-white">
           <div className="flex-1 relative h-full">
             <textarea
               ref={textareaRef}
