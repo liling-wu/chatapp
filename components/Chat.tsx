@@ -108,7 +108,7 @@ export function Chat() {
       </div>
       <div className={cn(
         "fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-3xl px-8 pb-8 bg-white",
-        messages.length === 0 ? "top-1/2 -translate-y-1/2" : ""
+        messages.length === 0 ? "top-2/3 -translate-y-1/2" : ""
       )}>
         <div className="flex gap-2 min-h-[108px] h-[108px] rounded-lg border border-gray-300 bg-white">
           <div className="flex-1 relative h-full">
