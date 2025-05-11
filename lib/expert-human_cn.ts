@@ -158,7 +158,7 @@ export interface Message {
     },
     {
       id: '26',
-      content: "Actually, yes. We had a similar issue six months ago, and it turned out to be due to a minor service update that changed the flow calibration. If everything else checks out, it's worth looking into possible recent software changes or updates.",
+      content: "Actually, yes. We had a similar issue six months ago, and it turned out to be due to a minor software update that changed the flow calibration. If everything else checks out, it's worth looking into possible recent software changes or updates.",
       role: 'user',
       timestamp: new Date(),
     },

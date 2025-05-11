@@ -8,7 +8,7 @@ export interface Message {
   export const predefinedMessages: Message[] = [
     {
       id: '1',
-      content: "There is an issue with SauceBot Nr.1001 on the pizza line. The sauce application is uneven.\nI need assistance with diagnosing the problem.",
+      content: "There is an issue with Sauce Station Nr.1001 on the pizza line. The sauce application is uneven.\nI need assistance with diagnosing the problem.",
       role: 'user',
       timestamp: new Date(),
     },
@@ -122,7 +122,7 @@ export interface Message {
     },
     {
       id: '20',
-      content: "No problem. As an additional suggestion, consider reducing the line speed for now. Slowing things down temporarily will give SauceBot more time to apply the sauce evenly. It's not a permanent fix, but it could help maintain quality and prevent any further issues during troubleshooting.",
+      content: "No problem. As an additional suggestion, consider reducing the line speed for now. Slowing things down temporarily will give Sauce Station more time to apply the sauce evenly. It's not a permanent fix, but it could help maintain quality and prevent any further issues during troubleshooting.",
       role: 'assistant',
       timestamp: new Date(),
     }
